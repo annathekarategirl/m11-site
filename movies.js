@@ -40,6 +40,7 @@ let movies=[movie,movie2]
   }
     
   }
+  updateMovieRating("sashank redemption",1234)
   // title, cast, description, rating
 
   // Method to update the rating of the movie
