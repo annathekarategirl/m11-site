@@ -11,29 +11,29 @@ class Movie{
     this.#description=description;
     this.#rating=rating;
   }
-  updaterating(newrating){
-    this.#rating=newrating
+  updateRating(newRating){
+    this.#rating=newRating
   }
   display(){
     div.innerHTML+="Title: "+this.#title+"<br>Cast: "+this.#cast+"<br>Description: "+this.#description+'<br>Rating: '+this.#rating
   }
-  titleaccess(){
+  titleAccess(){
     return this.#title
   }
 }
 let movie= new Movie("sashank redemption","Sai SaShank, George","gud movie","10000")
-movie.updaterating("6.7")
+movie.updateRating("6.7")
 movie.display()
 let movie2=new Movie("gone with wind","rhett butler, sclarlet oahra","based","1000000")
 let movies=[movie,movie2]
 
- function updatemoverating(title,newrating){
+ function updateMovieRating(title,newRating){
   
   for(let i=0; i<movies.length;i++){
     
-    var movtitle=movies[i].titleaccess()
+    var movtitle=movies[i].titleAccess()
     if (movtitle===title){
-      movies[i].updaterating(newrating)
+      movies[i].updateRating(newRating)
       div.innerHTML+="<br><br><strong>New Info:</strong> <br>"
       movies[i].display()
     }
