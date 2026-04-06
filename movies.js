@@ -15,7 +15,7 @@ class Movie{
     this.#rating=newrating
   }
   display(){
-    div.innerHTML="Title: "+this.#title+"<br>Cast: "+this.#cast+"<br>Description: "+this.#description+'<br>Rating: '+this.#rating
+    div.innerHTML+="Title: "+this.#title+"<br>Cast: "+this.#cast+"<br>Description: "+this.#description+'<br>Rating: '+this.#rating
   }
   titleaccess(){
     return this.#title
@@ -30,9 +30,12 @@ let movies=[movie,movie2]
  function updatemoverating(title,newrating){
   
   for(let i=0; i<movies.length;i++){
+    
     var movtitle=movies[i].titleaccess()
-    if (movies[i].movtitle==title){
-      console.log("wokr")
+    if (movtitle===title){
+      movies[i].updaterating(newrating)
+      div.innerHTML+="<br><br><strong>New Info:</strong> <br>"
+      movies[i].display()
     }
   }
     
