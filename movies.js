@@ -17,10 +17,26 @@ class Movie{
   display(){
     div.innerHTML="Title: "+this.#title+"<br>Cast: "+this.#cast+"<br>Description: "+this.#description+'<br>Rating: '+this.#rating
   }
+  titleaccess(){
+    return this.#title
+  }
 }
 let movie= new Movie("sashank redemption","Sai SaShank, George","gud movie","10000")
 movie.updaterating("6.7")
 movie.display()
+let movie2=new Movie("gone with wind","rhett butler, sclarlet oahra","based","1000000")
+let movies=[movie,movie2]
+
+ function updatemoverating(title,newrating){
+  
+  for(let i=0; i<movies.length;i++){
+    var movtitle=movies[i].titleaccess()
+    if (movies[i].movtitle==title){
+      console.log("wokr")
+    }
+  }
+    
+  }
   // title, cast, description, rating
 
   // Method to update the rating of the movie
@@ -35,3 +51,4 @@ movie.display()
 // Update the rating of the movie
 
 // Display the updated information of the movie
+
