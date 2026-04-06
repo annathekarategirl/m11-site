@@ -18,6 +18,9 @@ class Movie{
     div.innerHTML="Title: "+this.#title+"<br>Cast: "+this.#cast+"<br>Description: "+this.#description+'<br>Rating: '+this.#rating
   }
 }
+let movie= new Movie("sashank redemption","Sai SaShank, George","gud movie","10000")
+movie.updaterating("6.7")
+movie.display()
   // title, cast, description, rating
 
   // Method to update the rating of the movie
